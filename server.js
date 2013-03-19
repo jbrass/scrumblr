@@ -77,6 +77,7 @@ var socketio_options = {
 };
 // socket.io SETUP
 var io = require('socket.io').listen(app);
+io.set('log level', 1);
 io.configure(function () {
   io.set('transports', [
       'websocket'
